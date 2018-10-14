@@ -6,6 +6,7 @@ import {TranslateModule} from '@ngx-translate/core';
 import {HeroService} from '../../shared/hero.service';
 import {APP_CONFIG, AppConfig} from '../../../../configs/app.config';
 import {HeroesListPageComponent} from './heroes-list-page.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('HeroListComponent', () => {
   let fixture;
@@ -16,7 +17,8 @@ describe('HeroListComponent', () => {
       imports: [
         TestsModule,
         TranslateModule.forRoot(),
-        HeroesModule
+        HeroesModule,
+        NoopAnimationsModule
       ],
       providers: [
         {provide: APP_CONFIG, useValue: AppConfig},

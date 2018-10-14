@@ -6,6 +6,7 @@ import {TestsModule} from '../../modules/tests.module';
 import {HeroService} from '../../../modules/heroes/shared/hero.service';
 import {HomePageComponent} from './home-page.component';
 import {APP_CONFIG, AppConfig} from '../../../configs/app.config';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('HomePage', () => {
   let fixture;
@@ -17,6 +18,7 @@ describe('HomePage', () => {
       imports: [
         TestsModule,
         TranslateModule.forRoot(),
+        NoopAnimationsModule
       ],
       declarations: [
         HomePageComponent
